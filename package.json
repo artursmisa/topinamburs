@@ -1,0 +1,9 @@
+{
+  "name": "topinamburs",
+  "version": "1.0.0",
+  "description": "A simple single page website",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step needed for static site'"
+  }
+}
