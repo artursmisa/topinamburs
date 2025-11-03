@@ -49,10 +49,18 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-green);
     text-decoration: none;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-right {
@@ -168,6 +176,18 @@ body {
 .content-block {
     max-width: 900px;
     margin: 0 auto;
+}
+
+/* About Section Logo */
+.about-logo-container {
+    text-align: center;
+    margin: 2rem 0 3rem;
+}
+
+.about-logo {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
 }
 
 .content-block p {
@@ -331,6 +351,14 @@ a:hover {
         gap: 1rem;
     }
 
+    .logo-img {
+        height: 40px;
+    }
+
+    .about-logo {
+        max-width: 350px;
+    }
+
     .nav-right {
         flex-direction: column;
         gap: 1rem;
@@ -382,6 +410,18 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .logo-img {
+        height: 35px;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .about-logo {
+        max-width: 280px;
+    }
+
     .hero {
         padding: 4rem 1rem;
     }
