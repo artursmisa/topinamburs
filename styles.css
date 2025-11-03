@@ -107,13 +107,46 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+}
+
+/* Nav container max-widths at different breakpoints */
+@media (min-width: 576px) {
+    .nav-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .nav-container {
+        max-width: 1320px;
+    }
 }
 
 .logo {
@@ -284,11 +317,44 @@ body {
     line-height: 1.6;
 }
 
-/* Container */
+/* Container - Bootstrap-style responsive widths */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Container max-widths at different breakpoints */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
 }
 
 /* Sections */
@@ -623,10 +689,6 @@ a:hover {
         display: flex;
     }
 
-    .nav-container {
-        padding: 0 1.5rem;
-    }
-
     .nav-right {
         position: fixed;
         top: 0;
@@ -685,10 +747,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0 1rem;
-    }
-
     .logo {
         font-size: 1.3rem;
     }
@@ -734,10 +792,6 @@ a:hover {
     .hero-text {
         font-size: 1rem;
         line-height: 1.5;
-    }
-
-    .container {
-        padding: 0 1.5rem;
     }
 
     .section {
@@ -873,10 +927,6 @@ a:hover {
         padding: 1rem 0;
     }
 
-    .nav-container {
-        padding: 0 0.8rem;
-    }
-
     .logo {
         font-size: 1.2rem;
     }
@@ -935,10 +985,6 @@ a:hover {
     .hero-text {
         font-size: 0.95rem;
         line-height: 1.5;
-    }
-
-    .container {
-        padding: 0 1rem;
     }
 
     .section {
