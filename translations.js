@@ -579,12 +579,10 @@ function updateContent() {
 }
 
 function updateActiveLanguage() {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-lang') === currentLanguage) {
-            btn.classList.add('active');
-        }
-    });
+    const select = document.getElementById('language-select');
+    if (select) {
+        select.value = currentLanguage;
+    }
 }
 
 // Initialize on page load
@@ -598,12 +596,12 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent();
     updateActiveLanguage();
 
-    // Add click handlers to language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = btn.getAttribute('data-lang');
+    // Add change handler to language select
+    const select = document.getElementById('language-select');
+    if (select) {
+        select.addEventListener('change', (e) => {
+            const lang = e.target.value;
             setLanguage(lang);
         });
-    });
+    }
 });

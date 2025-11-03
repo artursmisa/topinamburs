@@ -70,14 +70,13 @@ body {
 /* Language Switcher */
 .language-switcher {
     display: flex;
-    gap: 0.5rem;
     align-items: center;
     border-left: 1px solid var(--border-color);
     padding-left: 1.5rem;
 }
 
-.lang-btn {
-    background: transparent;
+.lang-select {
+    background: white;
     border: 2px solid var(--border-color);
     color: var(--text-dark);
     padding: 0.4rem 0.8rem;
@@ -86,17 +85,17 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-width: 70px;
 }
 
-.lang-btn:hover {
+.lang-select:hover {
     border-color: var(--primary-green);
-    color: var(--primary-green);
 }
 
-.lang-btn.active {
-    background: var(--primary-green);
+.lang-select:focus {
+    outline: none;
     border-color: var(--primary-green);
-    color: white;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
 }
 
 .nav-menu li a {
