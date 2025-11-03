@@ -11,25 +11,34 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Topinambur.eu</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#why-topinambur">Why Topinambur?</a></li>
-                <li><a href="#prebiotics">Prebiotics</a></li>
-                <li><a href="#applications">Applications</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#b2b">B2B</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#" class="logo" data-i18n="logo">Topinambur.eu</a>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+                    <li><a href="#why-topinambur" data-i18n="navWhy">Why Topinambur?</a></li>
+                    <li><a href="#prebiotics" data-i18n="navPrebiotics">Prebiotics</a></li>
+                    <li><a href="#applications" data-i18n="navApplications">Applications</a></li>
+                    <li><a href="#research" data-i18n="navResearch">Research</a></li>
+                    <li><a href="#b2b" data-i18n="navB2B">B2B</a></li>
+                    <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en" title="English">EN</button>
+                    <button class="lang-btn" data-lang="lv" title="Latviešu">LV</button>
+                    <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+                    <button class="lang-btn" data-lang="et" title="Eesti">ET</button>
+                    <button class="lang-btn" data-lang="lt" title="Lietuvių">LT</button>
+                </div>
+            </div>
         </div>
     </nav>
  
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Topinambur</h1>
-            <p class="hero-subtitle">Jerusalem Artichoke - Nature's Perfect Prebiotic</p>
-            <p class="hero-text">Wholefood solutions for human health and animal nutrition</p>
+            <h1 data-i18n="heroTitle">Topinambur</h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Jerusalem Artichoke - Nature's Perfect Prebiotic</p>
+            <p class="hero-text" data-i18n="heroText">Wholefood solutions for human health and animal nutrition</p>
         </div>
     </section>
 
@@ -199,9 +208,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Topinambur.eu. All rights reserved.</p>
-            <p class="footer-tags">#topinambur #jerusalemartichoke #prebiotic #inulin #healthyfood #wholefood #animalfeed</p>
+            <p data-i18n="footerCopyright">&copy; 2025 Topinambur.eu. All rights reserved.</p>
+            <p class="footer-tags" data-i18n="footerTags">#topinambur #jerusalemartichoke #prebiotic #inulin #healthyfood #wholefood #animalfeed</p>
         </div>
     </footer>
+
+    <!-- Translation Script -->
+    <script src="translations.js"></script>
 </body>
 </html>
