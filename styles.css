@@ -192,6 +192,10 @@ body {
     padding: 8rem 2rem 6rem;
     position: relative;
     overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero::before {
@@ -203,11 +207,18 @@ body {
     bottom: 0;
     background: radial-gradient(circle at 30% 50%, rgba(255, 217, 61, 0.15) 0%, transparent 50%);
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    max-width: 900px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(107, 142, 78, 0.2);
 }
 
 .hero-content h1 {
@@ -216,6 +227,7 @@ body {
     font-weight: 700;
     color: var(--dark-green);
     letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .hero-subtitle {
@@ -229,7 +241,7 @@ body {
     font-size: 1.2rem;
     color: var(--text-light);
     max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 0;
     line-height: 1.6;
 }
 
@@ -605,6 +617,11 @@ a:hover {
 
     .hero {
         padding: 6rem 1.5rem 5rem;
+        min-height: 400px;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
     }
 
     .hero-content h1 {
@@ -673,6 +690,11 @@ a:hover {
 
     .hero {
         padding: 5rem 1.2rem 4rem;
+        min-height: 350px;
+    }
+
+    .hero-content {
+        padding: 1.2rem;
     }
 
     .hero-content h1 {
