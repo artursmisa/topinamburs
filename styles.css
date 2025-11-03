@@ -272,6 +272,9 @@ body {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .section h2::after {
@@ -642,6 +645,7 @@ a:hover {
 
     .section h2 {
         font-size: 2.3rem;
+        padding: 0 1rem;
     }
 
     .section h3 {
@@ -718,7 +722,8 @@ a:hover {
     }
 
     .section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding: 0 0.5rem;
     }
 
     .section h3 {
