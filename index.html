@@ -25,7 +25,12 @@
                 <img src="images/jerusalemartichoke.png" alt="Jerusalem Artichoke Logo" class="logo-img">
                 <span data-i18n="logo">Topinambur.eu</span>
             </a>
-            <div class="nav-right">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-right" id="navMenu">
                 <ul class="nav-menu">
                     <li><a href="#about" data-i18n="navAbout">About Us</a></li>
                     <li><a href="#why-topinambur" data-i18n="navWhy">Why Topinambur?</a></li>
@@ -36,13 +41,21 @@
                     <li><a href="#contact" data-i18n="navContact">Contact</a></li>
                 </ul>
                 <div class="language-switcher">
-                    <select id="language-select" class="lang-select">
-                        <option value="en">EN</option>
-                        <option value="lv">LV</option>
-                        <option value="ru">RU</option>
-                        <option value="et">ET</option>
-                        <option value="lt">LT</option>
-                    </select>
+                    <button class="lang-btn" data-lang="en" aria-label="English">
+                        <span class="flag-icon">🇬🇧</span>
+                    </button>
+                    <button class="lang-btn" data-lang="lv" aria-label="Latviešu">
+                        <span class="flag-icon">🇱🇻</span>
+                    </button>
+                    <button class="lang-btn" data-lang="ru" aria-label="Русский">
+                        <span class="flag-icon">🇷🇺</span>
+                    </button>
+                    <button class="lang-btn" data-lang="et" aria-label="Eesti">
+                        <span class="flag-icon">🇪🇪</span>
+                    </button>
+                    <button class="lang-btn" data-lang="lt" aria-label="Lietuvių">
+                        <span class="flag-icon">🇱🇹</span>
+                    </button>
                 </div>
             </div>
         </div>
