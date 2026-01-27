@@ -260,7 +260,7 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--cream-green) 0%, var(--pale-yellow) 50%, var(--light-green) 100%);
     color: var(--text-dark);
-    text-align: center;
+    text-align: left;
     padding: 8rem 2rem 6rem;
     position: relative;
     overflow: hidden;
@@ -285,12 +285,44 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    width: 100%;
+    max-width: 100%;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     border-radius: 30px;
     box-shadow: 0 20px 60px rgba(107, 142, 78, 0.2);
+}
+
+/* Hero content responsive max-widths matching container */
+@media (min-width: 576px) {
+    .hero-content {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-content {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-content {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-content {
+        max-width: 1320px;
+    }
 }
 
 .hero-content h1 {
@@ -312,8 +344,7 @@ body {
 .hero-text {
     font-size: 1.2rem;
     color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto 0;
+    margin: 0;
     line-height: 1.6;
 }
 
@@ -371,12 +402,9 @@ body {
     font-size: 3rem;
     color: var(--dark-green);
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 100%;
     word-wrap: break-word;
     hyphens: auto;
@@ -386,8 +414,7 @@ body {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 60px;
     height: 3px;
     background: linear-gradient(90deg, var(--sunflower-yellow), var(--accent-yellow));
@@ -402,8 +429,7 @@ body {
 }
 
 .content-block {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 /* About Section Logo */
@@ -422,7 +448,6 @@ body {
 }
 
 .about-logo {
-    max-width: 550px;
     width: 100%;
     height: auto;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
@@ -562,8 +587,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 2rem;
-    max-width: 1000px;
-    margin: 3rem auto;
+    margin: 3rem 0;
 }
 
 .research-card {
@@ -592,8 +616,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
-    max-width: 950px;
-    margin: 3rem auto;
+    margin: 3rem 0;
 }
 
 .contact-card {
@@ -765,9 +788,6 @@ a:hover {
         margin: 2rem 0 3rem;
     }
 
-    .about-logo {
-        max-width: 380px;
-    }
 
     .hero {
         padding: 5rem 1rem 4rem;
@@ -954,10 +974,6 @@ a:hover {
     .about-logo-container {
         padding: 1.2rem;
         margin: 1.5rem 0 2rem;
-    }
-
-    .about-logo {
-        max-width: 280px;
     }
 
     .hero {
@@ -1154,9 +1170,6 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 3rem 0;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .showcase-img {
@@ -1310,5 +1323,129 @@ a:hover {
     .prod-img-large,
     .prod-img-group img {
         border-radius: 20px;
+    }
+}
+
+/* Comparison Table Styles */
+.table-responsive {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(107, 142, 78, 0.1);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    font-size: 0.95rem;
+}
+
+.comparison-table thead {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+}
+
+.comparison-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.comparison-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.comparison-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: var(--light-green);
+}
+
+.comparison-table td {
+    padding: 1.25rem 1.5rem;
+    color: var(--text-dark);
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem 1rem;
+    }
+
+    .comparison-table th {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .comparison-table {
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table tbody {
+        display: block;
+    }
+
+    .comparison-table tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: var(--bg-white);
+    }
+
+    .comparison-table td {
+        display: block;
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .comparison-table td:last-child {
+        border-bottom: none;
+    }
+
+    .comparison-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--primary-green);
+        display: block;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+
+    .comparison-table td:first-child {
+        background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .comparison-table td:first-child:before {
+        color: var(--sunflower-yellow);
     }
 }
