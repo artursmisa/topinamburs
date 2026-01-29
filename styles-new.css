@@ -197,32 +197,32 @@ body {
 }
 
 .lang-dropdown {
-    background: white;
-    border: 2px solid var(--primary-green);
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    background: rgba(107, 142, 78, 0.08);
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
     cursor: pointer;
     color: var(--dark-green);
     font-weight: 500;
     transition: all 0.3s ease;
     outline: none;
-    min-width: 150px;
+    min-width: 90px;
 }
 
 .lang-dropdown:hover {
-    background: var(--light-green);
-    border-color: var(--secondary-green);
+    background: rgba(107, 142, 78, 0.15);
 }
 
 .lang-dropdown:focus {
-    border-color: var(--secondary-green);
+    background: rgba(107, 142, 78, 0.15);
     box-shadow: 0 0 0 3px rgba(107, 142, 78, 0.1);
 }
 
 .lang-dropdown option {
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    background: white;
 }
 
 /* Hamburger Menu */
