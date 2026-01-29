@@ -617,7 +617,7 @@ const translations = {
 };
 
 // Language switcher functionality
-let currentLanguage = 'en';
+let currentLanguage = 'lv';
 
 function setLanguage(lang) {
     currentLanguage = lang;
@@ -639,19 +639,15 @@ function updateContent() {
 }
 
 function updateActiveLanguage() {
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        if (btn.getAttribute('data-lang') === currentLanguage) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
+    const langDropdown = document.getElementById('langDropdown');
+    if (langDropdown) {
+        langDropdown.value = currentLanguage;
+    }
 }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Check for saved language preference
+    // Check for saved language preference, default to Latvian (lv)
     const savedLang = localStorage.getItem('preferredLanguage');
     if (savedLang && translations[savedLang]) {
         currentLanguage = savedLang;
@@ -660,12 +656,12 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent();
     updateActiveLanguage();
 
-    // Add click handlers to flag buttons
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
+    // Add change handler to language dropdown
+    const langDropdown = document.getElementById('langDropdown');
+    if (langDropdown) {
+        langDropdown.addEventListener('change', (e) => {
+            const lang = e.target.value;
             setLanguage(lang);
         });
-    });
+    }
 });
